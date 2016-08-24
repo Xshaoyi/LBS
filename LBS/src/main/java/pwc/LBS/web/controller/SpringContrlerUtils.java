@@ -12,12 +12,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 @Controller
 public class SpringContrlerUtils {
+	
 	@Autowired
 	private RequestMappingHandlerMapping requestMappingHandlerMapping;
 	
-	@RequestMapping(value = "/admin/util/url2controller")  
+	public RequestMappingHandlerMapping getRequestMappingHandlerMapping() {
+		return requestMappingHandlerMapping;
+	}
+
+	public void setRequestMappingHandlerMapping(RequestMappingHandlerMapping requestMappingHandlerMapping) {
+		this.requestMappingHandlerMapping = requestMappingHandlerMapping;
+	}
+
+	@RequestMapping("/admin/util/url2controller")  
     @ResponseBody  
     public void list(HttpServletResponse response) {  
         StringBuilder sb = new StringBuilder();  

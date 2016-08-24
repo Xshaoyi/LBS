@@ -11,7 +11,7 @@
 		<!-- Java EE / Java SE dependencies -->
 		<tomcat.version>7.0.59</tomcat.version>
 		<!-- Spring -->
-		<spring-io-platform.version>2.0.5.RELEASE</spring-io-platform.version>
+		<spring-io-platform.version>2.0.7.RELEASE</spring-io-platform.version>
 	</properties>
 	<dependencyManagement>
 		<!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
