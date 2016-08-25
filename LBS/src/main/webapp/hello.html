@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app = "phonecatApp">
 <head>
 <meta charset="ISO-8859-1">
 <link rel="script/node_modules/bootstrap/dist/css/bootstrap.css"></link>
 <script src="script/node_modules/angular/angular.js"></script>
+<script src="script/app/app.js"></script>
+<script src="script/app/app.spec.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
-	<p>Nothing here {{'yet' + '!'}}</p>
+<body ng-controller="PhoneListController">
+	<p>Total number of phones: {{phones.length}}</p>
+	<ul>
+		<li ng-repeat="phone in phones"><span>{{phone.name}}</span>
+			<p>{{phone.snippet}}</p>
+		</li>
+	</ul>
+	<table>
+	  <tr><th>Row number</th></tr>
+	  <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+'a'}}</td></tr>
+	</table>
 </body>
 </html>
