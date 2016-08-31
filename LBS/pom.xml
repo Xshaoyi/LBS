@@ -12,6 +12,7 @@
 		<tomcat.version>7.0.59</tomcat.version>
 		<!-- Spring -->
 		<spring-io-platform.version>2.0.7.RELEASE</spring-io-platform.version>
+		<tomcat-jdbc.version>7.0.42</tomcat-jdbc.version>
 	</properties>
 	<dependencyManagement>
 		<!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
@@ -27,6 +28,17 @@
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>${tomcat-jdbc.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.38</version>
+		</dependency>
+		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>1.2</version>
@@ -40,6 +52,10 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
 		</dependency>
 		<dependency>
 
