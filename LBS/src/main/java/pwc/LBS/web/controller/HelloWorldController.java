@@ -23,6 +23,7 @@ public class HelloWorldController {
 	@RequestMapping("/hello")
 	public String helloWorld(Model model){
 		List<Account> acclist=dao.getAccounts();
+		dao.insertAccounts();
 		model.addAttribute("message", "helloworld");
 		return "hello";
 	}
