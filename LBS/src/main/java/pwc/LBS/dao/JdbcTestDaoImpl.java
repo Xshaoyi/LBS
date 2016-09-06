@@ -36,7 +36,7 @@ public class JdbcTestDaoImpl {
 	}
 	public void  insertAccounts(){
 		 //this.jdbcTemplate.update("insert in to account (name,sic_category__c)", "hello","helloworld");
-		 this.jdbcTemplate.update("insert in to account (?,?)", new PreparedStatementSetter(){
+		 this.jdbcTemplate.update("insert into account (name,sic_category__c) values(?,?)", new PreparedStatementSetter(){
 
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setString(1, "hello");

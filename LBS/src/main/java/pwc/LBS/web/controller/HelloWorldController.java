@@ -25,7 +25,7 @@ public class HelloWorldController {
 		List<Account> acclist=dao.getAccounts();
 		dao.insertAccounts();
 		model.addAttribute("message", "helloworld");
-		return "hello";
+		return null;
 	}
 	
 }
