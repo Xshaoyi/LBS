@@ -25,4 +25,12 @@
 		<servlet-name>myapp</servlet-name>
 		<url-pattern>/myapp/*</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>staticmapping</servlet-name>
+		<servlet-class>pwc.LBS.servlet.DefaultWrapperServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>staticmapping</servlet-name>
+		<url-pattern>/img/*</url-pattern>
+	</servlet-mapping>
 </web-app>
